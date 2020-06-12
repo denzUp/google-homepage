@@ -8,13 +8,15 @@
                 position: relative;
                 top: 90px;
                 height: 300px;
+                width: 1338px;
                 display: grid;
                 grid-template-columns: repeat(4, auto);
-                grid-template-rows: repeat(3, auto);
+                grid-template-rows: repeat(4, auto);
                 grid-template-areas: 
                 ". im im ."
                 ". cn cn ."
-                ". gs fl .";
+                ". gs fl ."
+                "ln ln ln ln";
             }
             .googlelogo {
                 grid-area: im;
@@ -34,6 +36,19 @@
                 align-self: center;
                 border-color: rgba(255,255,255, 0);
             }
+            #searchbox-border{
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #57555445;
+                height: 32px;
+                width: 400px;
+                border-radius: 10px;
+                flex-basis: content;
+                margin-bottom: 40px;
+                margin-top: 8px;
+            }
             .search-button {
                 grid-area: gs;
                 justify-self: end;
@@ -46,22 +61,21 @@
                 justify-self: start;
                 margin-left: 5px;
             }
-            #searchbox{
-                display: inline-flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                border: 1px solid #57555445;
-                height: 32px;
-                width: 400px;
-                border-radius: 10px;
-                flex-basis: content;
+            .languages {
+                grid-area: ln;
+                justify-self: center;
+                font-family: sans-serif;
+                font-size: 12px; 
+            }
+            a {
+                text-decoration: none;
+                color:rgb(32, 93, 133)
             }
             .navbar {
                 display: flex;
                 justify-content: flex-end;
                 width: 1338px;
-                font-size: 14px;    
+                font-size: 13px;    
             }
             .nav-items {
                 position: relative;
@@ -80,10 +94,15 @@
                 border: 0px;
                 padding: 8px 8px 8px 8px;
             }
+            .footer {
+                position: fixed;
+                bottom: 5px;
+                left: 10px;
+            }
         </style>
     </head>
     <body>
-        <div id="navbar">
+        <div>
             <nav class="navbar">
                 <a href="#" target="_blank" tabindex="1" class="nav-items">Gmail</a>
                 <a href="#" target="_blank" tabindex="2" class="nav-items">Images</a>
@@ -93,20 +112,22 @@
                 </a>
             </nav>
         </div>
-        <div id="form">
+        <div>
             <form class="search">  
                 <img class="googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google-homepage-logo"><br>
-                <div class="searchbox1" id="searchbox">
-                <input type="search" class="searchbox2">
+                <div class="searchbox1" id="searchbox-border">
+                <input type="search" class="searchbox2" accesskey="s">
                 </div>
                 <input type="submit" value="Google Search" class="search-button">
-                <input type="submit" value="I'm Feeling Lucky" class="feelin-lucky">
+                <input type="submit" value="I'm Feeling Lucky" class="feelin-lucky"><br>
+                <p class="languages">Google offered in: <a href="#">ChiShona</a> <a href="#">Ndebele</a> <a href="#">isiZulu</a></p>
             </form>
         </div>
-        <div id="footer">
-            <footer>
-
-            </footer>
-        </div>
     </body>
+   <footer class="footer">
+       <a href="#">Advertising</a>
+       <a href="#">Business</a>
+       <a href="#">About</a>
+       <a href="#">How Search Works</a>
+   </footer>
 </html>
