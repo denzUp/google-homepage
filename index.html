@@ -96,8 +96,32 @@
             }
             .footer {
                 position: fixed;
-                bottom: 5px;
+                bottom: 0px;
+                left: 0px;
+                display: grid;
+                width: 1366px;
+                height: 50px;
+                background-color: silver;
+                grid-template-columns: repeat (2, auto);
+                grid-template-rows: repeat (2, auto);
+                grid-template-areas: 
+                "tl tr"
+                "bl br";
+            }
+            .footer-top-row {}
+            .footer-bottom-row1 {
+                grid-area: bl;
+                word-spacing: 12px;
+                position: relative;
                 left: 10px;
+                
+            }
+            .footer-bottom-row2 {
+                grid-area: br;
+            }
+            .footer-color {
+                text-decoration: none;
+                color: rgb(32, 31, 31);
             }
         </style>
     </head>
@@ -125,9 +149,11 @@
         </div>
     </body>
    <footer class="footer">
-       <a href="#">Advertising</a>
-       <a href="#">Business</a>
-       <a href="#">About</a>
-       <a href="#">How Search Works</a>
+       <div class="footer-bottom-row1">
+            <a href="#" class="footer-color">Advertising</a>
+            <a href="#" class="footer-color">Business</a>
+            <a href="#" class="footer-color">About</a>
+            <a href="#" style="word-spacing: normal;" class="footer-color">How Search Works</a>
+       </div>
    </footer>
 </html>
