@@ -57,15 +57,36 @@
                 border-radius: 10px;
                 flex-basis: content;
             }
+            .navbar {
+                display: flex;
+                justify-content: flex-end;
+                width: 1338px;
+            }
+            .nav-items {
+                position: relative;
+                top: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 65px;
+                color: #000000;
+                text-decoration: none;
+            }
+            .sign-in-button {
+                color: white;
+                background-color: royalblue;
+                border: 0px;
+                padding: 8px 8px 8px 8px;
+            }
         </style>
     </head>
     <body>
-        <nav>
-            <a href="#" target="_blank" tabindex="1">Gmail</a>
-            <a href="#" target="_blank" tabindex="2">Images</a>
-            <a href="#" target="_blank" title="Google Apps" tabindex="3">button</a>
+        <nav class="navbar">
+            <a href="#" target="_blank" tabindex="1" class="nav-items">Gmail</a>
+            <a href="#" target="_blank" tabindex="2" class="nav-items">Images</a>
+            <a href="#" target="_blank" title="Google Apps" tabindex="3" class="nav-items">button</a>
             <a href="#" target="_blank">
-                <input type="button" value="Sign in" style="color: ghostwhite;">
+                <input type="button" value="Sign in" class="sign-in-button">
             </a>
         </nav>
         <div>
@@ -76,7 +97,7 @@
                 </div>
                 <input type="submit" value="Google Search" class="search-button">
                 <input type="submit" value="I'm Feeling Lucky" class="feelin-lucky">
-             </form>
+            </form>
         </div>
     </body>
 </html>
