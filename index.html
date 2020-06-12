@@ -61,6 +61,7 @@
                 display: flex;
                 justify-content: flex-end;
                 width: 1338px;
+                font-size: 14px;    
             }
             .nav-items {
                 position: relative;
@@ -68,9 +69,10 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 65px;
+                width: 60px;
                 color: #000000;
                 text-decoration: none;
+                font-family: sans-serif;
             }
             .sign-in-button {
                 color: white;
@@ -81,15 +83,17 @@
         </style>
     </head>
     <body>
-        <nav class="navbar">
-            <a href="#" target="_blank" tabindex="1" class="nav-items">Gmail</a>
-            <a href="#" target="_blank" tabindex="2" class="nav-items">Images</a>
-            <a href="#" target="_blank" title="Google Apps" tabindex="3" class="nav-items">button</a>
-            <a href="#" target="_blank">
-                <input type="button" value="Sign in" class="sign-in-button">
-            </a>
-        </nav>
-        <div>
+        <div id="navbar">
+            <nav class="navbar">
+                <a href="#" target="_blank" tabindex="1" class="nav-items">Gmail</a>
+                <a href="#" target="_blank" tabindex="2" class="nav-items">Images</a>
+                <a href="#" target="_blank" title="Google Apps" tabindex="3" class="nav-items">button</a>
+                <a href="#" target="_blank">
+                    <input type="button" value="Sign in" class="sign-in-button">
+                </a>
+            </nav>
+        </div>
+        <div id="form">
             <form class="search">  
                 <img class="googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google-homepage-logo"><br>
                 <div class="searchbox1" id="searchbox">
@@ -98,6 +102,11 @@
                 <input type="submit" value="Google Search" class="search-button">
                 <input type="submit" value="I'm Feeling Lucky" class="feelin-lucky">
             </form>
+        </div>
+        <div id="footer">
+            <footer>
+
+            </footer>
         </div>
     </body>
 </html>
